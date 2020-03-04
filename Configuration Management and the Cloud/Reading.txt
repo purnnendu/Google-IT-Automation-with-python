@@ -1,0 +1,77 @@
+Configuration Management and the Cloud - Reading Material
+
+
+Week 1 - Automating with Configuration Management
+
+Check out the following links for more information: Puppet Resources
+
+  https://puppet.com/docs/puppet/latest/lang_resources.html
+  https://puppet.com/blog/deploy-packages-across-your-windows-estate-with-bolt-and-chocolatey/
+
+Check out the following links for more information: More Information About Configuration Management
+
+  https://en.wikipedia.org/wiki/Domain-specific_language
+  http://radar.oreilly.com/2015/04/the-puppet-design-philosophy.html
+
+
+Week 2 - Deploying puppet
+
+Check out the following links for more information: More Information About Deploying Puppet Locally
+
+  https://puppet.com/docs/puppet/latest/style_guide.html
+  https://puppet.com/docs/puppetserver/latest/install_from_packages.html
+
+Check out the following link for more information: More Information about Deploying Puppet to Clients
+
+  http://www.masterzen.fr/2010/11/14/puppet-ssl-explained/
+
+Check out the following links for more information: More Information About Updating Deployments
+
+  https://rspec-puppet.com/tutorial/
+  http://puppet-lint.com/
+
+
+Week 3 - Automation in cloud
+
+Over the last few videos we learned how to create and use virtual machines running on GCP. We then explored how we can use one VM as a template for creating
+many more VMs with the same setup. You can find a lot more information about this in the following tutorials: Managing VMs in GCP
+
+  https://cloud.google.com/compute/docs/quickstart-linux
+  https://cloud.google.com/compute/docs/instances/create-vm-from-instance-template
+  https://cloud.google.com/sdk/docs
+
+Check out the following links for more information: More About Cloud & GCP
+
+  Getting started on GCP with Terraform
+
+  Creating groups of unmanaged instances
+  Official documentation is here: https://cloud.google.com/load-balancing/docs/https/
+  https://geekflare.com/gcp-load-balancer/
+
+Interesting articles about hybrid setups:
+
+  https://blog.inkubate.io/create-a-centos-7-terraform-template-for-vmware-vsphere/
+  https://www.terraform.io/docs/enterprise/before-installing/reference-architecture/gcp.html
+  https://www.hashicorp.com/resources/terraform-on-premises-hybrid-cloud-wayfair
+
+
+Week 4 - Managing cloud instances at scale
+
+Here are some links to some common Quotas you’ll find in various cloud providers: More About Cloud Providers
+
+  https://cloud.google.com/compute/quotas#understanding_vm_cpu_and_ip_address_quotas
+  https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html
+  https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits#service-specific-limits
+
+Check out the following links for more information: More Information on Monitoring and Alerting
+
+  https://www.datadoghq.com/blog/monitoring-101-collecting-data/
+  https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting
+  https://en.wikipedia.org/wiki/High_availability
+  https://landing.google.com/sre/books/
+
+Check out the following links for more information: Reading: Debugging Problems on the Cloud
+
+  https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-instances
+  https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/
+  https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-troubleshoot.htm

@@ -1,0 +1,5 @@
+Managing Data and Processes - Reading material
+
+Check out the following link for more information: Python Subprocesses Cheat Sheet
+
+    https://docs.python.org/3/library/subprocess.html

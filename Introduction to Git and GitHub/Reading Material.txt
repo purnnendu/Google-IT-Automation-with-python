@@ -1,0 +1,180 @@
+Introduction to Git and GitHub - Reading Material
+
+
+Week 1 - Introduction to Version Control
+
+Here are some great Git resources available online:
+
+  Pro Git: This book (available online and in print) covers all the fundamentals of how Git works and how to use it.
+           Refer to it if you want to learn more about the subjects that we cover throughout the course.(https://git-scm.com/book/en/v2)
+  Git tutorial: This tutorial includes a very brief reference of all Git commands available. You can use it to quickly
+                review the commands that you need to use.(https://git-scm.com/docs/gittutorial)
+
+diff - diff is used to find differences between two files. On its own, it’s a bit hard to use; instead, use it with diff -u to
+       find lines which differ in two files:
+
+diff -u - diff -u is used to compare two files, line by line, and have the differing lines compared side-by-side in the same
+          output. See below:
+
+Patch - Patch is useful for applying file differences. See the below example, which compares two files. The comparison is saved
+        as a .diff file, which is then patched to the original file!
+
+There are some other interesting patch and diff commands such as patch -p1, diff -r !.
+Check them out in the following references:
+
+  http://man7.org/linux/man-pages/man1/diff.1.html
+  http://man7.org/linux/man-pages/man1/patch.1.html
+
+Check out the following links for more information: More Information About Git
+
+  https://git-scm.com/doc
+  https://www.mercurial-scm.org/
+  https://subversion.apache.org/
+  https://en.wikipedia.org/wiki/Version_control
+
+The first step on the way to using Git is to install it! The directions found in the Git documentation below are pretty thorough and helpful,
+check them out for the best method of getting Git onto your platform of choice (Installing Git).
+
+  Git download page - https://git-scm.com/downloads
+  Git installation instructions for each platform -https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Check out the following links for more information: (Initial Git Cheat Sheet)
+
+  The Linux kernel documentation itself, as well as impassioned opinions from other developers.
+  (https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/submitting-patches.rst?id=HEAD)
+  (https://commit.style/)
+  (https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message)
+
+  You can check out "Setting your email in Git" and "Keeping your email address private" on the GitHub help site for how to do
+  this. (https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
+
+
+Week 2 - Using Git Locally
+
+Advanced Git Cheat Sheet -
+
+Command             Explanation & Link
+git commit -a	      Stages files automatically (https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---all)
+git log -p	        Produces patch text (https://git-scm.com/docs/git-log#_generating_patch_text_with_p)
+git show	          Shows various objects (https://git-scm.com/docs/git-show)
+git diff	          Is similar to the Linux `diff` command, and can show the differences in various commits (https://git-scm.com/docs/git-diff)
+git diff --staged	  An alias to --cached, this will show all staged files compared to the named commit (https://git-scm.com/docs/git-diff)
+git add -p	        Allows a user to interactively review patches to add to the current commit (https://git-scm.com/docs/git-add)
+git mv	            Similar to the Linux `mv` command, this moves a file (https://git-scm.com/docs/git-mv)
+git rm	            Similar to the Linux `rm` command, this deletes, or removes a file (https://git-scm.com/docs/git-rm)
+
+There are many useful git cheatsheets online as well. Please take some time to research and study a few, such as this one
+(https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+
+.gitignore file - .gitignore files are used to tell the git tool to intentionally ignore some files in a given Git repository. For example, this can be useful f
+or configuration files or metadata files that a user may not want to check into the master branch. Check out more at: https://git-scm.com/docs/gitignore.
+
+A few common examples of file patterns to exclude can be found here(https://gist.github.com/octocat/9257657).
+
+Git Revert Cheat Sheet -
+
+git checkout is effectively used to switch branches (https://git-scm.com/docs/git-checkout).
+
+git reset basically resets the repo, throwing away some changes. It’s somewhat difficult to understand, so reading the examples in the documentation may
+be a bit more useful (https://git-scm.com/docs/git-reset#_examples).
+
+There are some other useful articles online, which discuss more aggressive approaches to resetting the repo
+(https://jwiegley.github.io/git-from-the-bottom-up/3-Reset/4-doing-a-hard-reset.html).
+
+git commit --amend is used to make changes to commits after-the-fact, which can be useful for making notes about a given commit
+(https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---amend).
+
+git revert makes a new commit which effectively rolls back a previous commit. It’s a bit like an undo command
+(https://git-scm.com/docs/git-revert).
+
+There are a few ways you can rollback commits in Git (https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things).
+
+There are some interesting considerations about how git object data is stored, such as the usage of sha-1.
+
+Feel free to read more here:
+
+    https://en.wikipedia.org/wiki/SHA-1
+    https://github.blog/2017-03-20-sha-1-collision-detection-on-github-com/
+
+Git Branches and Merging Cheat Sheet -
+
+Command	                    Explanation & Link
+git branch	                Used to manage branches (https://git-scm.com/docs/git-branch)
+git branch <name> 	        Creates the branch (https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+git branch -d <name>	      Deletes the branch (https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--D)
+git branch -D <name>	      Forcibly deletes the branch (https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--D)
+git checkout <branch> 	    Switches to a branch. (https://git-scm.com/docs/git-checkout)
+git checkout -b <branch>    Creates a new branch and switches to it.(https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt--bltnewbranchgt)
+git merge <branch> 	        Merge joins branches together (https://git-scm.com/docs/git-merge).
+git merge --abort	          If there are merge conflicts (meaning files are incompatible), --abort can be used to abort the merge action.
+git log --graph --oneline	  This shows a summarized view of the commit history for a repo (https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
+
+
+Week 3 - Working with Remotes
+
+There are various remote repository hosting sites:
+
+  GitHub
+  BitBucket
+  Gitlab.
+
+Some useful commands for getting started:
+
+Command	      Explanation & Link
+git clone URL	Git clone is used to clone a remote repository into a local workspace (https://git-scm.com/docs/git-clone)
+git push	    Git push is used to push commits from your local repo to a remote repo (https://git-scm.com/docs/git-push)
+git pull	    Git pull is used to fetch the newest updates from a remote repository (https://git-scm.com/docs/git-pull)
+
+This can be useful for keeping your local workspace up to date.
+
+  https://help.github.com/en/articles/caching-your-github-password-in-git
+  https://help.github.com/en/articles/generating-an-ssh-key
+
+
+Command	                Explanation & Links
+git remote 	            Lists remote repos (https://git-scm.com/docs/git-remote)
+git remote -v	          List remote repos verbously (https://git-scm.com/docs/git-remote#Documentation/git-remote.txt--v)
+git remote show <name>	Describes a single remote repo (https://git-scm.com/docs/git-remote#Documentation/git-remote.txt-emshowem)
+git remote update	      Fetches the most up-to-date objects (https://git-scm.com/docs/git-remote#Documentation/git-remote.txt-emupdateem)
+git fetch	              Downloads specific objects (https://git-scm.com/docs/git-fetch)
+git branch -r	          Lists remote branches; can be combined with other branch arguments to manage remote branches
+                        (https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--r)
+
+You can also see more in the video Cryptography in Action from the course IT Security: Defense against the digital dark arts
+(https://www.coursera.org/learn/it-security).
+
+
+Merge conflicts are not uncommon when working in a team of developers, or on Open Source Software. Fortunately, GitHub has some good documentation on
+how to handle them when they happen:
+
+    https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-merge-conflicts
+    https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line
+
+You can also use git rebase branchname to change the base of the current branch to be branchname
+(https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+
+The git rebase command is a lot more powerful.  Check out this link for more information (https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History).
+
+
+Week 4 - Collaboration
+
+Check out the following link for more information: Git Fork and Pull Request Cheat Sheet
+
+  https://help.github.com/en/articles/about-pull-request-merges
+
+Check out the following links for more information: More Information on Code Reviews
+
+  http://google.github.io/styleguide/
+  https://help.github.com/en/articles/about-pull-request-reviews
+  https://medium.com/osedea/the-perfect-code-review-process-845e6ba5c31
+  https://smartbear.com/learn/code-review/what-is-code-review/
+
+Check out the following links for more information: Additional Tools
+
+  https://arp242.net/diy.html
+  https://help.github.com/en/articles/closing-issues-using-keywords
+  https://help.github.com/en/articles/setting-guidelines-for-repository-contributors
+  https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html
+  https://stackify.com/what-is-cicd-whats-important-and-how-to-get-it-right/
+  https://docs.travis-ci.com/user/tutorial/
+  https://docs.travis-ci.com/user/build-stages/

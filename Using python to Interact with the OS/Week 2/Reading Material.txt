@@ -1,0 +1,16 @@
+Managing Files with Python - Reading Material
+
+Check out the following link for more information: Reading and Writing Files Cheat-Sheet
+
+    https://docs.python.org/3/library/functions.html#open
+    
+Check out the following links for more information: Files and Directories Cheat-Sheet
+
+    https://docs.python.org/3/library/os.html
+    https://docs.python.org/3/library/os.path.html
+    https://en.wikipedia.org/wiki/Unix_time
+    
+Check out the following links for more information: CSV Files Cheat Sheet
+
+    https://docs.python.org/3/library/csv.html
+    https://realpython.com/python-csv/
